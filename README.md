@@ -1,23 +1,31 @@
-# Realtime Crypto Stream
+# Crypto Price WebSocket Project
 
-A simple Node.js app to get live crypto prices.
+This is my assignment to fetch live crypto prices from Binance and share them using a local WebSocket server.
 
-## What we did:
-1. **Live Prices**: Connects to Binance to get live prices for BTC, ETH, and BNB.
-2. **WebSocket Server**: Sends live prices to clients. It limits users to 100 connections.
-3. **Web API**: A simple API to get current prices. It blocks users who make more than 10 requests per minute.
-4. **Docker**: Added a `Dockerfile` and `.dockerignore` so you can easily run the app in Docker.
-5. **Clean Code**: Added `.gitignore` to hide files like `node_modules`.
+## What I did
+- Connected to Binance's WebSocket API to get live prices.
+- Created my own local WebSocket server.
+- Extract and save the exact details needed: Symbol, Last price, 24h change, and Timestamp.
+- Broadcast these live updates to any connected clients.
+- Handled client connections and disconnections gracefully.
+
+## Bonus Features I added
+- Fetching multiple pairs: BTC/USDT, ETH/USDT, and BNB/USDT.
+- A REST API endpoint (`GET /`) to get the latest prices as JSON.
+- Added rate limiting for the API (max 10 requests per minute).
+- Added a connection limit for WebSockets (max 100 clients).
+- Containerized the app using Docker.
 
 ## How to run it
 
-### 1. Run with Node:
+**Normal way:**
 ```bash
 npm install
 npm start
 ```
+*Server runs on port 8000*
 
-### 2. Run with Docker:
+**Using Docker:**
 ```bash
 docker build -t crypto-app .
 docker run -p 8000:8000 -d crypto-app
