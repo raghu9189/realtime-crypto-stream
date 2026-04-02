@@ -1,5 +1,11 @@
 # Crypto Price WebSocket Project
 
+### 🚀 Live Demo
+- **WebSocket Endpoint:** `wss://realtime-crypto-stream.onrender.com/ws`
+- **REST API Endpoint:** [https://realtime-crypto-stream.onrender.com/price](https://realtime-crypto-stream.onrender.com/price)
+
+> **Note:** This app is deployed on Render's free tier. If the server has been asleep, the very first API hit or WebSocket connection might take up to 30-50 seconds to start. After that, it will be instant!
+
 This is my assignment to fetch live crypto prices from Binance and share them using a local WebSocket server.
 
 ## What I did
