@@ -1,0 +1,25 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raghu9189/realtime-crypto-stream.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/raghu9189/realtime-crypto-stream/issues"
+  },
+  "homepage": "https://github.com/raghu9189/realtime-crypto-stream#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.2",
+    "ws": "^8.20.0"
+  }
+}
